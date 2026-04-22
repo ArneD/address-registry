@@ -1,3 +1,10 @@
+## [5.9.4](https://github.com/informatievlaanderen/address-registry/compare/v5.9.3...v5.9.4) (2026-04-22)
+
+
+### Bug Fixes
+
+* **feed:** streetname id should be puri ([f927503](https://github.com/informatievlaanderen/address-registry/commit/f9275034000911bff32af1acdd889a939c4f63e5))
+
 ## [5.9.3](https://github.com/informatievlaanderen/address-registry/compare/v5.9.2...v5.9.3) (2026-04-09)
 
 
