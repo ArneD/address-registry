@@ -18,6 +18,7 @@ namespace AddressRegistry.Tests.ProjectionTests.Feed
     using Be.Vlaanderen.Basisregisters.GrAr.Common.NetTopology;
     using Be.Vlaanderen.Basisregisters.GrAr.Legacy;
     using Be.Vlaanderen.Basisregisters.GrAr.Legacy.Adres;
+    using Be.Vlaanderen.Basisregisters.GrAr.Oslo;
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
     using Be.Vlaanderen.Basisregisters.ProjectionHandling.SqlStreamStore;
     using Be.Vlaanderen.Basisregisters.ProjectionHandling.Testing;
@@ -178,7 +179,7 @@ namespace AddressRegistry.Tests.ProjectionTests.Feed
                             It.Is<List<BaseRegistriesCloudEventAttribute>>(attrs =>
                                 attrs.Any(a => a.Name == AddressAttributeNames.StreetNameId
                                                && a.OldValue == null
-                                               && a.NewValue!.ToString() == addressWasMigrated.StreetNamePersistentLocalId.ToString())
+                                               && a.NewValue!.ToString() == OsloNamespaces.StraatNaam.ToPuri(addressWasMigrated.StreetNamePersistentLocalId.ToString()))
                                 && attrs.Any(a => a.Name == AddressAttributeNames.StatusName
                                                && a.OldValue == null)
                                 && attrs.Any(a => a.Name == AddressAttributeNames.HouseNumber
@@ -257,7 +258,7 @@ namespace AddressRegistry.Tests.ProjectionTests.Feed
                             It.Is<List<BaseRegistriesCloudEventAttribute>>(attrs =>
                                 attrs.Any(a => a.Name == AddressAttributeNames.StreetNameId
                                                && a.OldValue == null
-                                               && a.NewValue!.ToString() == addressWasProposedV2.StreetNamePersistentLocalId.ToString())
+                                               && a.NewValue!.ToString() == OsloNamespaces.StraatNaam.ToPuri(addressWasProposedV2.StreetNamePersistentLocalId.ToString()))
                                 && attrs.Any(a => a.Name == AddressAttributeNames.StatusName
                                                && a.OldValue == null
                                                && a.NewValue!.ToString() == nameof(AdresStatus.Voorgesteld))
@@ -341,7 +342,7 @@ namespace AddressRegistry.Tests.ProjectionTests.Feed
                             It.Is<List<BaseRegistriesCloudEventAttribute>>(attrs =>
                                 attrs.Any(a => a.Name == AddressAttributeNames.StreetNameId
                                                && a.OldValue == null
-                                               && a.NewValue!.ToString() == addressWasProposedV2.StreetNamePersistentLocalId.ToString())
+                                               && a.NewValue!.ToString() == OsloNamespaces.StraatNaam.ToPuri(addressWasProposedV2.StreetNamePersistentLocalId.ToString()))
                                 && attrs.Any(a => a.Name == AddressAttributeNames.StatusName
                                                && a.OldValue == null
                                                && a.NewValue!.ToString() == nameof(AdresStatus.Voorgesteld))
@@ -990,7 +991,10 @@ namespace AddressRegistry.Tests.ProjectionTests.Feed
                             It.IsAny<DateTimeOffset>(),
                             It.Is<List<string>>(l => l.Contains(NisCode)),
                             It.Is<List<BaseRegistriesCloudEventAttribute>>(attrs =>
-                                attrs.Any(a => a.Name == AddressAttributeNames.StatusName
+                                attrs.Any(a => a.Name == AddressAttributeNames.StreetNameId
+                                               && a.OldValue == null
+                                               && a.NewValue!.ToString() == OsloNamespaces.StraatNaam.ToPuri(addressRemovalWasCorrected.StreetNamePersistentLocalId.ToString()))
+                                && attrs.Any(a => a.Name == AddressAttributeNames.StatusName
                                                && a.OldValue == null
                                                && a.NewValue!.ToString() == nameof(AdresStatus.Gehistoreerd))
                                 && attrs.Any(a => a.Name == AddressAttributeNames.HouseNumber
@@ -1279,7 +1283,7 @@ namespace AddressRegistry.Tests.ProjectionTests.Feed
                             It.Is<List<BaseRegistriesCloudEventAttribute>>(attrs =>
                                 attrs.Any(a => a.Name == AddressAttributeNames.StreetNameId
                                                && a.OldValue == null
-                                               && a.NewValue!.ToString() == addressWasProposedForMunicipalityMerger.StreetNamePersistentLocalId.ToString())
+                                               && a.NewValue!.ToString() == OsloNamespaces.StraatNaam.ToPuri(addressWasProposedForMunicipalityMerger.StreetNamePersistentLocalId.ToString()))
                                 && attrs.Any(a => a.Name == AddressAttributeNames.StatusName
                                                && a.OldValue == null
                                                && a.NewValue!.ToString() == AdresStatus.Voorgesteld.ToString())

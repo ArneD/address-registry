@@ -12,6 +12,7 @@ namespace AddressRegistry.Projections.Feed.AddressFeed
     using Be.Vlaanderen.Basisregisters.GrAr.CrsTransform;
     using Be.Vlaanderen.Basisregisters.GrAr.Legacy;
     using Be.Vlaanderen.Basisregisters.GrAr.Legacy.Adres;
+    using Be.Vlaanderen.Basisregisters.GrAr.Oslo;
     using Be.Vlaanderen.Basisregisters.GrAr.Provenance;
     using Be.Vlaanderen.Basisregisters.ProjectionHandling.Connector;
     using Be.Vlaanderen.Basisregisters.ProjectionHandling.SqlStreamStore;
@@ -69,7 +70,7 @@ namespace AddressRegistry.Projections.Feed.AddressFeed
                     return;
 
                 List<BaseRegistriesCloudEventAttribute> attributes = [
-                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, message.Message.StreetNamePersistentLocalId),
+                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, OsloNamespaces.StraatNaam.ToPuri(message.Message.StreetNamePersistentLocalId.ToString())),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StatusName, null, document.Document.Status),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.HouseNumber, null, document.Document.HouseNumber),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.PostalCode, null, document.Document.PostalCode),
@@ -104,7 +105,7 @@ namespace AddressRegistry.Projections.Feed.AddressFeed
                 await context.AddressDocuments.AddAsync(document, ct);
 
                 List<BaseRegistriesCloudEventAttribute> attributes = [
-                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, message.Message.StreetNamePersistentLocalId),
+                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, OsloNamespaces.StraatNaam.ToPuri(message.Message.StreetNamePersistentLocalId.ToString())),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StatusName, null, AdresStatus.Voorgesteld),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.HouseNumber, null, document.Document.HouseNumber),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.PostalCode, null, document.Document.PostalCode),
@@ -142,7 +143,7 @@ namespace AddressRegistry.Projections.Feed.AddressFeed
                 await context.AddressDocuments.AddAsync(document, ct);
 
                 List<BaseRegistriesCloudEventAttribute> attributes = [
-                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, message.Message.StreetNamePersistentLocalId),
+                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, OsloNamespaces.StraatNaam.ToPuri(message.Message.StreetNamePersistentLocalId.ToString())),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StatusName, null, document.Document.Status),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.HouseNumber, null, document.Document.HouseNumber),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.PostalCode, null, document.Document.PostalCode),
@@ -177,7 +178,7 @@ namespace AddressRegistry.Projections.Feed.AddressFeed
                 await context.AddressDocuments.AddAsync(document, ct);
 
                 List<BaseRegistriesCloudEventAttribute> attributes = [
-                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, message.Message.StreetNamePersistentLocalId),
+                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, OsloNamespaces.StraatNaam.ToPuri(message.Message.StreetNamePersistentLocalId.ToString())),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StatusName, null, AdresStatus.Voorgesteld),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.HouseNumber, null, document.Document.HouseNumber),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.PostalCode, null, document.Document.PostalCode),
@@ -771,7 +772,7 @@ namespace AddressRegistry.Projections.Feed.AddressFeed
                 document.LastChangedOn = message.Message.Provenance.Timestamp;
 
                 List<BaseRegistriesCloudEventAttribute> attributes = [
-                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, message.Message.StreetNamePersistentLocalId),
+                    new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StreetNameId, null, OsloNamespaces.StraatNaam.ToPuri(message.Message.StreetNamePersistentLocalId.ToString())),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.StatusName, null, document.Document.Status),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.HouseNumber, null, document.Document.HouseNumber),
                     new BaseRegistriesCloudEventAttribute(AddressAttributeNames.PostalCode, null, document.Document.PostalCode),
