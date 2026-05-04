@@ -1140,7 +1140,7 @@ namespace AddressRegistry.Projections.Feed.AddressFeed
                 {
                     list.Add(new AddressPositionCloudEventValue(gml, SystemReferenceId.SrsNameLambert72));
 
-                    var lambert08Geometry = positionGeometry.TransformFromLambert72To08();
+                    var lambert08Geometry = positionGeometry.TransformFromLambert72To08(roundingPrecision: 2);
                     list.Add(new AddressPositionCloudEventValue(lambert08Geometry.ConvertToGml(false), SystemReferenceId.SrsNameLambert2008));
                     break;
                 }
