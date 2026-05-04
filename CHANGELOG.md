@@ -1,3 +1,10 @@
+## [5.9.5](https://github.com/informatievlaanderen/address-registry/compare/v5.9.4...v5.9.5) (2026-05-04)
+
+
+### Bug Fixes
+
+* **feed:** round lambert08 to 2 decimals ([239d953](https://github.com/informatievlaanderen/address-registry/commit/239d95311ace9e93b3250c73b9321bebc957c5d1))
+
 ## [5.9.4](https://github.com/informatievlaanderen/address-registry/compare/v5.9.3...v5.9.4) (2026-04-22)
 
 
