@@ -60,7 +60,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-backoffice-api-image.tar
       image-name: backoffice-api
       test-project: AddressRegistry.Tests
@@ -76,7 +76,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-api-oslo-image.tar
       image-name: api-oslo
       test-project: AddressRegistry.Tests
@@ -92,7 +92,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-api-extract-image.tar
       image-name: api-extract
       test-project: AddressRegistry.Tests
@@ -108,7 +108,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-projector-image.tar
       image-name: projector
       test-project: AddressRegistry.Tests
@@ -124,7 +124,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-last-changed-list-image.tar
       image-name: last-changed-list
       test-project: AddressRegistry.Tests
@@ -140,7 +140,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-projections-backoffice-image.tar
       image-name: projections-backoffice
       test-project: AddressRegistry.Tests
@@ -156,7 +156,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-consumer-image.tar
       image-name: consumer
       test-project: AddressRegistry.Tests
@@ -172,7 +172,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-consumer-read-municipality-image.tar
       image-name: consumer-read-municipality
       test-project: AddressRegistry.Tests
@@ -188,7 +188,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-consumer-read-streetname-image.tar
       image-name: consumer-read-streetname
       test-project: AddressRegistry.Tests
@@ -204,7 +204,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-consumer-read-postal-image.tar
       image-name: consumer-read-postal
       test-project: AddressRegistry.Tests
@@ -220,7 +220,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-producer-image.tar
       image-name: producer
       test-project: AddressRegistry.Tests
@@ -236,7 +236,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-producer-snapshot-oslo-image.tar
       image-name: producer-snapshot-oslo
       test-project: AddressRegistry.Tests
@@ -252,7 +252,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-snapshot-verifier-image.tar
       image-name: snapshot-verifier
       test-project: AddressRegistry.Tests
@@ -277,7 +277,7 @@ jobs:
       run: docker build . --no-cache --tag $TAG --build-arg BUILD_NUMBER=$SEMVER
       working-directory: src/AddressRegistry.CacheWarmer
       env:
-        TAG: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry/cache-warmer:${{ needs.set-release-version.outputs.version }}
+        TAG: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address/cache-warmer:${{ needs.set-release-version.outputs.version }}
         SEMVER: ${{ needs.set-release-version.outputs.version }}
 
     - name: Show images
@@ -287,7 +287,7 @@ jobs:
     - name: Save Image
       if: ${{ needs.set-release-version.outputs.version }} != 'none'
       shell: bash
-      run: docker image save ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry/cache-warmer:${{ needs.set-release-version.outputs.version }} -o ~/ar-cache-warmer-image.tar
+      run: docker image save ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address/cache-warmer:${{ needs.set-release-version.outputs.version }} -o ~/ar-cache-warmer-image.tar
 
     - name: Upload image
       if: ${{ needs.set-release-version.outputs.version }} != 'none'
@@ -330,7 +330,7 @@ jobs:
     needs: [ set-release-version ]
     if: ${{ (github.repository_owner == 'Informatievlaanderen') && (needs.set-release-version.outputs.version != 'none') }}
     with:
-      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address-registry
+      registry: ${{ vars.VBR_DEVOPS_DOCKER_REGISTRY }}/address
       image-file: ar-lambda-sqsbackofficefunction-image.tar
       image-name: lambda-sqsbackofficefunction
       test-project: AddressRegistry.Tests
@@ -551,7 +551,7 @@ jobs:
         shell: bash
         run: |
           echo $IMAGE:$SEMVER
-          docker push $BUILD_DOCKER_REGISTRY/address-registry/$IMAGE:$SEMVER
+          docker push $BUILD_DOCKER_REGISTRY/address/$IMAGE:$SEMVER
         env:
           BUILD_DOCKER_REGISTRY: ${{ secrets.VBR_DEVOPS_DOCKER_REGISTRY }}
           IMAGE: ${{ matrix.image }}
