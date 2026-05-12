@@ -1,3 +1,10 @@
+## [5.9.7](https://github.com/informatievlaanderen/address-registry/compare/v5.9.6...v5.9.7) (2026-05-12)
+
+
+### Bug Fixes
+
+* **ci:** ecr + bump ([2d56a1f](https://github.com/informatievlaanderen/address-registry/commit/2d56a1ff361cc05bca0f6759a1e3e85c5724118c))
+
 ## [5.9.6](https://github.com/informatievlaanderen/address-registry/compare/v5.9.5...v5.9.6) (2026-05-12)
 
 
