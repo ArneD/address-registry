@@ -1,3 +1,10 @@
+## [5.9.6](https://github.com/informatievlaanderen/address-registry/compare/v5.9.5...v5.9.6) (2026-05-12)
+
+
+### Bug Fixes
+
+* **ci:** update pipelines + bump version ([27a1455](https://github.com/informatievlaanderen/address-registry/commit/27a1455115d1a2fee5ede4974fa61c8508117b18))
+
 ## [5.9.5](https://github.com/informatievlaanderen/address-registry/compare/v5.9.4...v5.9.5) (2026-05-04)
 
 
