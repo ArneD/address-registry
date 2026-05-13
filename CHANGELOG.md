@@ -1,3 +1,10 @@
+## [5.9.8](https://github.com/informatievlaanderen/address-registry/compare/v5.9.7...v5.9.8) (2026-05-13)
+
+
+### Bug Fixes
+
+* **feed:** fix addresshousenumberwasreaddressed ([2cdc6b5](https://github.com/informatievlaanderen/address-registry/commit/2cdc6b5090e52fa99bbb7f0ca48556c474857f13))
+
 ## [5.9.7](https://github.com/informatievlaanderen/address-registry/compare/v5.9.6...v5.9.7) (2026-05-12)
 
 
